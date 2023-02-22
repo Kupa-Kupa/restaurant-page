@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/home.js":
+/*!*********************!*\
+  !*** ./src/home.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction homePage() {\n  const h1 = document.createElement('h1');\n  const main = document.createElement('main');\n  const p = document.createElement('p');\n  const img = document.createElement('img');\n  const footer = document.createElement('footer');\n\n  h1.innerText = 'Piece-of-Pizz';\n  p.innerText =\n    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, accusamus! Impedit blanditiis quaerat nemo. Sequi rerum quasi totam nam libero!';\n  footer.innerText = 'Made by Kupa';\n\n  img.src = '../src/pizza-hero.jpg';\n  img.alt = 'pizza';\n\n  main.append(h1, p, img);\n\n  return { main, footer };\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (homePage);\n\n\n//# sourceURL=webpack://restaurant-page/./src/home.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -26,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pag
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction pageLoad() {\n  const content = document.querySelector('#content');\n  const header = document.createElement('header');\n  const h1 = document.createElement('h1');\n  const main = document.createElement('main');\n  const p = document.createElement('p');\n  const img = document.createElement('img');\n  const footer = document.createElement('footer');\n\n  h1.innerText = 'Piece-a-Pizza';\n  p.innerText =\n    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, accusamus! Impedit blanditiis quaerat nemo. Sequi rerum quasi totam nam libero!';\n  footer.innerText = 'Made by Kupa';\n\n  img.src = '../src/pizza-hero.jpg';\n  img.alt = 'pizza';\n\n  header.appendChild(h1);\n  main.append(p, img);\n\n  content.append(header, main, footer);\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (pageLoad);\n\n\n//# sourceURL=webpack://restaurant-page/./src/pageLoad.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n\n\nfunction pageLoad() {\n  const content = document.querySelector('#content');\n\n  const header = document.createElement('header');\n  const h1 = document.createElement('h1');\n  const nav = document.createElement('nav');\n  const ul = document.createElement('ul');\n  const liHome = document.createElement('li');\n  const liMenu = document.createElement('li');\n  const liContact = document.createElement('li');\n\n  const homePageElements = (0,_home__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n  h1.innerText = 'Piece-a-Pizza';\n\n  liHome.innerText = 'Home';\n  liHome.id = 'Home';\n\n  liMenu.innerText = 'Menu';\n  liMenu.id = 'Menu';\n\n  liContact.innerText = 'Contact';\n  liContact.id = 'Contact';\n\n  ul.append(liHome, liMenu, liContact);\n\n  nav.append(ul);\n\n  header.append(h1, nav);\n\n  content.append(header, homePageElements.main, homePageElements.footer);\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (pageLoad);\n\n\n//# sourceURL=webpack://restaurant-page/./src/pageLoad.js?");
 
 /***/ })
 
