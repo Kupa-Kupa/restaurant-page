@@ -55,6 +55,7 @@ main > h1 {
 
 main > p {
   padding: 1rem;
+  line-height: 1.7rem;
 
   grid-column: 1 / span 1;
 }
