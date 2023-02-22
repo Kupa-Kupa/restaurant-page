@@ -43,7 +43,7 @@ function pageLoad() {
 
   //create img element for main content section
   const img = document.createElement('img');
-  img.src = '../src/pizza-hero.jpg';
+  img.src = './pizza-hero.jpg';
   img.alt = 'pizza';
 
   // get object of text nodes for homepage and add text nodes to page
