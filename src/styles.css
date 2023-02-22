@@ -16,6 +16,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
+  justify-items: center;
 }
 
 header,
@@ -23,9 +24,33 @@ footer {
   margin: 1rem 0;
 }
 
+header > h1 {
+  padding-bottom: 1rem;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+header nav li {
+  list-style: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 main {
+  max-width: 1200px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto, auto, 1fr;
+  align-content: center;
+}
+
+main > h1 {
+  grid-column: 1 / span 1;
 }
 
 main > p {
@@ -35,6 +60,7 @@ main > p {
 }
 
 main > img {
+  grid-row: 1 / span 3;
   grid-column: 2 / span 2;
 
   object-fit: cover;

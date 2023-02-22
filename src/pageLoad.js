@@ -1,24 +1,36 @@
+import homePage from './home';
+
 function pageLoad() {
   const content = document.querySelector('#content');
+
   const header = document.createElement('header');
   const h1 = document.createElement('h1');
-  const main = document.createElement('main');
-  const p = document.createElement('p');
-  const img = document.createElement('img');
-  const footer = document.createElement('footer');
+  const nav = document.createElement('nav');
+  const ul = document.createElement('ul');
+  const liHome = document.createElement('li');
+  const liMenu = document.createElement('li');
+  const liContact = document.createElement('li');
+
+  const homePageElements = homePage();
 
   h1.innerText = 'Piece-a-Pizza';
-  p.innerText =
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, accusamus! Impedit blanditiis quaerat nemo. Sequi rerum quasi totam nam libero!';
-  footer.innerText = 'Made by Kupa';
 
-  img.src = '../src/pizza-hero.jpg';
-  img.alt = 'pizza';
+  liHome.innerText = 'Home';
+  liHome.id = 'Home';
 
-  header.appendChild(h1);
-  main.append(p, img);
+  liMenu.innerText = 'Menu';
+  liMenu.id = 'Menu';
 
-  content.append(header, main, footer);
+  liContact.innerText = 'Contact';
+  liContact.id = 'Contact';
+
+  ul.append(liHome, liMenu, liContact);
+
+  nav.append(ul);
+
+  header.append(h1, nav);
+
+  content.append(header, homePageElements.main, homePageElements.footer);
 }
 
 export default pageLoad;
