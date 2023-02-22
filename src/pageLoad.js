@@ -1,5 +1,6 @@
 // import homePage so I can retrieve homepage content on first page load
 import homePage from './home';
+import pizzaImage from './pizza-hero.jpg';
 
 function pageLoad() {
   // get #content div
@@ -43,7 +44,7 @@ function pageLoad() {
 
   //create img element for main content section
   const img = document.createElement('img');
-  img.src = './pizza-hero.jpg';
+  img.src = pizzaImage;
   img.alt = 'pizza';
 
   // get object of text nodes for homepage and add text nodes to page
