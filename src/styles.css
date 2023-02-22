@@ -1,0 +1,43 @@
+:root {
+  --background-color: rgb(252, 240, 218);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#content {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  text-align: center;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+header,
+footer {
+  margin: 1rem 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+main > p {
+  padding: 1rem;
+
+  grid-column: 1 / span 1;
+}
+
+main > img {
+  grid-column: 2 / span 2;
+
+  object-fit: cover;
+  width: 100%;
+  max-height: 800px;
+}
